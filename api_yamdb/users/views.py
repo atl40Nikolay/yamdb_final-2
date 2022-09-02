@@ -17,7 +17,6 @@ class SignupView(APIView, LimitOffsetPagination):
     permission_classes = (AllowAny, )
 
     def post(self, request):
-
         if request.user.is_anonymous:
             use_name = request.data.get('usernme')
             use_email = request.data.get('email')
@@ -33,8 +32,8 @@ class SignupView(APIView, LimitOffsetPagination):
                                      username=serializer.data.get('username'))
             confirmation_code = default_token_generator.make_token(user)
             sendmail(email, confirmation_code)
-            return Response(serializer.validated_data,
-                            status=status.HTTP_200_OK)
+        return Response(serializer.validated_data,
+                        status=status.HTTP_200_OK)
 
 
 class ConfirmRegisteredView(APIView):
