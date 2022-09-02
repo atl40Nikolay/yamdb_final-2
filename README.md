@@ -1,1 +1,1 @@
-![Build Status](https://github.com/DobruyPK/yamdb_final/workflows/Run%20tests/badge.svg)](https://github.com/DobruyPK/yamdb_final/workflows/yamdb_workflow.yml)
+![api_yamdb workflow](https://github.com/DobruyPK/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
