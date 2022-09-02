@@ -1,22 +1,19 @@
-from django.db.models import Avg
-from django.shortcuts import get_object_or_404
-from rest_framework import status
-from rest_framework.exceptions import ParseError
-from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework.filters import OrderingFilter, SearchFilter
-from rest_framework.viewsets import ModelViewSet
-
-from reviews.models import Category, Comment, Genre, Review, Title
 from core.filters import TitleFilter
 from core.permissions import (IsAdminOrSuperuserOrReadOnly,
                               IsAuthorOrStaffOrReadOnly)
+from django.db.models import Avg
+from django.shortcuts import get_object_or_404
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import status
+from rest_framework.exceptions import ParseError
+from rest_framework.filters import OrderingFilter, SearchFilter
+from rest_framework.viewsets import ModelViewSet
+from reviews.models import Category, Comment, Genre, Review, Title
+
 from .mixins import ListCreateDestroyViewSet
-from .serializers import (CategoriesSerializer,
-                          CommentsSerializer,
-                          GenreSerializer,
-                          ReviewsSerializer,
-                          TitlesCreateSerializer,
-                          TitlesSerializer)
+from .serializers import (CategoriesSerializer, CommentsSerializer,
+                          GenreSerializer, ReviewsSerializer,
+                          TitlesCreateSerializer, TitlesSerializer)
 
 
 class CategoriesViewSet(ListCreateDestroyViewSet):

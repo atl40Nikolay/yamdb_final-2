@@ -1,13 +1,9 @@
-from reviews.models import (Category,
-                            Comment,
-                            Genre,
-                            GenreToTitle,
-                            Review,
+from django.conf import settings
+from django.core.mail import send_mail
+from reviews.models import (Category, Comment, Genre, GenreToTitle, Review,
                             Title)
 from users.models import CustomUser
 from users.role_enums import Roles
-from django.conf import settings
-from django.core.mail import send_mail
 
 
 class GetTitleID:

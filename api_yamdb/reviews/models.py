@@ -1,8 +1,7 @@
+from core.validators import validate_date
 from django.conf import settings
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
-
-from core.validators import validate_date
 from users.models import CustomUser
 
 

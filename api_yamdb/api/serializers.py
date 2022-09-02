@@ -1,8 +1,7 @@
+from core.utils import GetTitleID
 from rest_framework import serializers
 from rest_framework.fields import CurrentUserDefault
 from rest_framework.validators import UniqueTogetherValidator
-
-from core.utils import GetTitleID
 from reviews.models import Category, Comment, Genre, Review, Title
 
 

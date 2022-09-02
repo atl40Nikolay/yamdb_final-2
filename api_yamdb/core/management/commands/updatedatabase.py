@@ -1,10 +1,9 @@
 import csv
 
-from django.conf import settings
-from django.core.management.base import BaseCommand
-
 from core.utils import (add_category, add_comments, add_genres, add_links,
                         add_review, add_titles, add_user)
+from django.conf import settings
+from django.core.management.base import BaseCommand
 
 
 class Command(BaseCommand):
